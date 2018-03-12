@@ -1,3 +1,8 @@
+var wins = 0
+var losses = 0
+$("#wins").text("Wins: " +  wins)
+$("#losses").text("Losses: " +  losses)
+
 // Here we use jQuery to select the header with "click-me" as its ID.
 // Whenever it is clicked...
 $(document).ready(function() {
@@ -28,9 +33,9 @@ $(document).ready(function() {
     });
   });
 
-  var compPick = Math.floor(Math.random() * 101 + 19);
-      var lockGame = false;
-      // We log the computer's pick to console to make it easier to troubleshoot
+    var compPick = Math.floor(Math.random() * 101 + 19);
+    // We then reveal the computer's pick in the html
+    $("#compPick").text("Comp Pick - " +  compPick);
       console.log("Computer Pick: " + compPick );
 
       var bluePick = Math.floor(Math.random() * 11 + 1);
@@ -41,3 +46,4 @@ $(document).ready(function() {
       console.log("red Pick: " + redPick );
       var yellowPick = Math.floor(Math.random() * 11 + 1);
       console.log("yellow Pick: " + yellowPick );
+
