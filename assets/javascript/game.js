@@ -20,6 +20,22 @@ $("#compPick").text("Comp Pick - " +  compPick);
   var yellowPick = Math.floor(Math.random() * 11 + 1);
   console.log("yellow Pick: " + yellowPick );
 
+  function reset(){
+    compPick = Math.floor(Math.random() * 101 + 19);
+    // We then reveal the computer's pick in the html
+        $("#compPick").text("Comp Pick - " +  compPick);
+            console.log("Computer Pick: " + compPick );
+    bluePick = Math.floor(Math.random() * 11 + 1);
+        console.log("blue Pick: " + bluePick );
+    greenPick = Math.floor(Math.random() * 11 + 1);
+        console.log("green Pick: " + greenPick );
+    redPick = Math.floor(Math.random() * 11 + 1);
+        console.log("red Pick: " + redPick );
+    yellowPick = Math.floor(Math.random() * 11 + 1);
+        console.log("yellow Pick: " + yellowPick );
+    yourSum= 0;
+        $("#yourSum").text("Your Sum: " +  yourSum)
+    } 
 
 // Whenever it is clicked...
 $(document).ready(function() {
@@ -31,6 +47,7 @@ $(document).ready(function() {
             wins ++;
             $("#wins").text("Wins: " +  wins)
             alert("You win!");
+            reset()
           }
       
           // Here we added an "else if" condition. If the user's counter ever exceeds the targetNumber...
@@ -39,6 +56,7 @@ $(document).ready(function() {
               $("#losses").text("Losses: " +  losses)
             // Then they are alerted with a loss.
             alert("You lose!!");
+            reset()
           }
 
     });
