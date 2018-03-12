@@ -1,49 +1,69 @@
+
 var wins = 0
 var losses = 0
+var yourSum = 0
 $("#wins").text("Wins: " +  wins)
 $("#losses").text("Losses: " +  losses)
+$("#yourSum").text("Your Sum: " +  yourSum)
 
-// Here we use jQuery to select the header with "click-me" as its ID.
+var compPick = Math.floor(Math.random() * 101 + 19);
+// We then reveal the computer's pick in the html
+$("#compPick").text("Comp Pick - " +  compPick);
+  console.log("Computer Pick: " + compPick );
+
+  var bluePick = Math.floor(Math.random() * 11 + 1);
+  console.log("blue Pick: " + bluePick );
+  var greenPick = Math.floor(Math.random() * 11 + 1);
+  console.log("green Pick: " + greenPick );
+  var redPick = Math.floor(Math.random() * 11 + 1);
+  console.log("red Pick: " + redPick );
+  var yellowPick = Math.floor(Math.random() * 11 + 1);
+  console.log("yellow Pick: " + yellowPick );
+
+
 // Whenever it is clicked...
 $(document).ready(function() {
     $("#blue1").on("click", function() {
-      // ... we trigger an alert.
-      alert("I've been clicked! blue");
+        yourSum = yourSum + bluePick
+        $("#yourSum").text("Your Sum: " +  yourSum);
+
+        if (yourSum === compPick) {
+            wins ++;
+            $("#wins").text("Wins: " +  wins)
+            alert("You win!");
+          }
+      
+          // Here we added an "else if" condition. If the user's counter ever exceeds the targetNumber...
+          else if (yourSum >= compPick) {
+              losses ++;
+              $("#losses").text("Losses: " +  losses)
+            // Then they are alerted with a loss.
+            alert("You lose!!");
+          }
+
     });
+    
   });
 
   $(document).ready(function() {
     $("#green2").on("click", function() {
-      // ... we trigger an alert.
-      alert("I've been clicked! green");
+        yourSum = yourSum + greenPick
+        $("#yourSum").text("Your Sum: " +  yourSum);
     });
   });
 
   $(document).ready(function() {
     $("#red3").on("click", function() {
-      // ... we trigger an alert.
-      alert("I've been clicked! red");
+        yourSum = yourSum + redPick
+        $("#yourSum").text("Your Sum: " +  yourSum);
     });
   });
 
   $(document).ready(function() {
     $("#yellow4").on("click", function() {
-      // ... we trigger an alert.
-      alert("I've been clicked! yellow");
+        yourSum = yourSum + yellowPick
+        $("#yourSum").text("Your Sum: " +  yourSum);
     });
   });
 
-    var compPick = Math.floor(Math.random() * 101 + 19);
-    // We then reveal the computer's pick in the html
-    $("#compPick").text("Comp Pick - " +  compPick);
-      console.log("Computer Pick: " + compPick );
-
-      var bluePick = Math.floor(Math.random() * 11 + 1);
-      console.log("blue Pick: " + bluePick );
-      var greenPick = Math.floor(Math.random() * 11 + 1);
-      console.log("green Pick: " + greenPick );
-      var redPick = Math.floor(Math.random() * 11 + 1);
-      console.log("red Pick: " + redPick );
-      var yellowPick = Math.floor(Math.random() * 11 + 1);
-      console.log("yellow Pick: " + yellowPick );
 
