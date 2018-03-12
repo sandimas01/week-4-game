@@ -1,0 +1,118 @@
+#header {
+    
+    color: #fff;
+    background: #C97124;
+    text-align: center;
+    margin: 10px;
+	width: 50%;
+    /* border-bottom: 2px solid #ccc; */
+  }
+
+  #instructions {
+    padding: 20px;
+    color: #68904E;
+    background: #FAE6CD;
+    text-align: left;
+    margin: 10px;
+	width: 100%;
+    /* border-bottom: 2px solid #ccc; */
+  }
+
+  #compScore {
+      float: left;
+    font-size: 30px;    
+    padding: 21px;
+    color:black;
+    background: #4AFDFE;
+    text-align: left;
+    margin: 10px;
+	width: 30%;
+    /* border-bottom: 2px solid #ccc; */
+  }
+
+  #winsLosses {
+      float: left;
+    padding: 20px;
+    color:black;
+    background: #5BC97E;
+    text-align: left;
+    margin: 10px;
+	width: 30%;
+    /* border-bottom: 2px solid #ccc; */
+  }
+
+  #yourScore2 {
+    padding: 2px;
+    color: #fff;
+    background:#2CA194;
+    text-align: left;
+    margin: 10px;
+	width: 50%;
+    /* border-bottom: 2px solid #ccc; */
+  }
+
+  #yourScore {
+    font-size: 30px;    
+    padding: 20px;
+    color: #fff;
+    background:#2CA194;
+    text-align: left;
+    margin: 10px;
+	width: 50%;
+    /* border-bottom: 2px solid #ccc; */
+  }
+
+  .images {
+    /* position: relative; */
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    /* overflow: auto; */
+  }
+
+/* general */
+body {
+	background-image: url("../images/background.png")
+}
+
+.container {
+    width: 100%;
+    max-width: 640px;
+    margin: 5px auto;
+    clear: both;
+    float: left;
+  }
+
+    
+h1,
+h2,
+h3,
+li,
+p {
+  margin-bottom: 20px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3 {
+  /* font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: 700;
+  color: #4aaaa5; */
+}
+
+h1 {
+  padding-bottom: 20px;
+  font-size: 30px;
+  line-height: 49px;
+  /* border-bottom: 3px solid #ddd; */
+}
+
+h2,
+h3 {
+  font-size: 22px;
+}
