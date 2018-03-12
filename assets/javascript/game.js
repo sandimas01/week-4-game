@@ -27,3 +27,17 @@ $(document).ready(function() {
       alert("I've been clicked! yellow");
     });
   });
+
+  var compPick = Math.floor(Math.random() * 101 + 19);
+      var lockGame = false;
+      // We log the computer's pick to console to make it easier to troubleshoot
+      console.log("Computer Pick: " + compPick );
+
+      var bluePick = Math.floor(Math.random() * 11 + 1);
+      console.log("blue Pick: " + bluePick );
+      var greenPick = Math.floor(Math.random() * 11 + 1);
+      console.log("green Pick: " + greenPick );
+      var redPick = Math.floor(Math.random() * 11 + 1);
+      console.log("red Pick: " + redPick );
+      var yellowPick = Math.floor(Math.random() * 11 + 1);
+      console.log("yellow Pick: " + yellowPick );
